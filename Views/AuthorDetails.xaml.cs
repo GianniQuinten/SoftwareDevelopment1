@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftwareDevelopment1.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace SoftwareDevelopment1.Views
         public AuthorDetails()
         {
             InitializeComponent();
+            DataContext =  new AuthorViewModel();
         }
     }
 }

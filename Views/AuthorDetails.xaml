@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="AuthorDetails" Height="450" Width="800">
     <Grid>
-        
+        <ListView Grid.Row="1" ItemsSource="LstAuthorDetails">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Lastname" DisplayMemberBinding="{Binding Lastname}"/>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="4" >
+                                    <Button Name="UpdateBtn" Content="Update" Width="40" Height="25" Margin="10,0,0,0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

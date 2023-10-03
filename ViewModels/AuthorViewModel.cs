@@ -31,7 +31,7 @@ namespace SoftwareDevelopment1.ViewModels
             }
         }
         
-        AuthorE
+  
         public AuthorViewModel()
         {
 

@@ -10,38 +10,60 @@ namespace Library.Models
 {
     public class Author : INotifyPropertyChanged
     {
-        private int id;
-        private string name;
-        private string lastname;
-
-        public int Id 
-        { 
-            get => id; set
+        private int _ID;
+        public int ID
+        {
+            get
             {
-                id = value;
-                OnPropertyChanged(nameof(Id));  
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    _ID = value;
+                    OnPropertyChanged("ID");
+                }
             }
         }
 
-        public string Name 
-        { 
-            get => name; set
+
+        private string _FirstName;
+        public string FirstName
+        {
+            get
             {
-                name = value;
-                OnPropertyChanged(nameof(Name));
+                return _FirstName;
+            }
+            set
+            {
+                if (_FirstName != value)
+                {
+                    _FirstName = value;
+                    OnPropertyChanged("FirstName");
+                }
             }
         }
 
-        public string Lastname
-        { 
-            get => lastname; set
+
+        private string _LastName;
+        public string LastName
+        {
+            get
             {
-                lastname = value;
-                OnPropertyChanged(nameof(Lastname));
+                return _LastName;
+            }
+            set
+            {
+                if (_LastName != value)
+                {
+                    _LastName = value;
+                    OnPropertyChanged("LastName");
+                }
             }
         }
 
-    public ICollection<ItemAuthor> ItemAuthors { get; set; }
+        public ICollection<ItemAuthor> ItemAuthors { get; set; }
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
