@@ -20,6 +20,8 @@ namespace SoftwareDevelopment1.Views
     /// </summary>
     public partial class AuthorDetails : Window
     {
+
+        authorCrudEntities _db = new authorCrudEntities();
         public AuthorDetails()
         {
             InitializeComponent();
