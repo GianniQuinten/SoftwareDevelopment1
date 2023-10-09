@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftwareDevelopment1.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,5 +26,14 @@ namespace SoftwareDevelopment1
             InitializeComponent();
 
         }
-    }
+
+		private void AddItemPageButton_Click(object sender, RoutedEventArgs e)
+		{
+			// Create an instance of the AddItem window
+			AddItem addItemWindow = new AddItem();
+
+			// Show the AddItem window
+			addItemWindow.Show();
+		}
+	}
 }
